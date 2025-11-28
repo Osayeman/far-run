@@ -223,7 +223,15 @@
         const MAX_LIVES = 5;
 
         // --- FIREBASE SETUP ---
-        const firebaseConfig = JSON.parse(__firebase_config || '{}');
+        const firebaseConfig = {
+  apiKey: "AIzaSyDoqP73GE3n3XBW2af4ISH3jzEUslVaqEw",
+  authDomain: "far-run.firebaseapp.com",
+  projectId: "far-run",
+  storageBucket: "far-run.firebasestorage.app",
+  messagingSenderId: "355231455654",
+  appId: "1:355231455654:web:900c17feaedab170489767",
+  measurementId: "G-M33XE7RF4R"
+};
         if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
         const db = firebase.firestore();
         const auth = firebase.auth();
