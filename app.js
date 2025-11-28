@@ -5,12 +5,13 @@ const MAX_LIVES = 5;
 
 // REPLACE THIS WITH YOUR REAL FIREBASE KEYS
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT.appspot.com",
-    messagingSenderId: "SENDER_ID",
-    appId: "APP_ID"
+  apiKey: "AIzaSyDoqP73GE3n3XBW2af4ISH3jzEUslVaqEw",
+  authDomain: "far-run.firebaseapp.com",
+  projectId: "far-run",
+  storageBucket: "far-run.firebasestorage.app",
+  messagingSenderId: "355231455654",
+  appId: "1:355231455654:web:900c17feaedab170489767",
+  measurementId: "G-M33XE7RF4R"
 };
 
 // --- INIT ---
