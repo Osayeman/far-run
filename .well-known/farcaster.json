@@ -1,0 +1,15 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOiA8WW91ci1GSUQ-IiwgInR5cGUiOiAiY3VzdG9keSIsICJrZXkiOiAiPFlvdXItQ3VzdG9keS1BZGRyZXNzPiJ9",
+    "payload": "eyJkb21haW4iOiAiPFlvdXItRG9tYWluPiJ9",
+    "signature": "<Your-Signature-From-Base-Build-Tool>"
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "FAR RUN",
+    "iconUrl": "https://cdn-icons-png.flaticon.com/512/3062/3062634.png",
+    "homeUrl": "https://your-domain.com",
+    "splashImageUrl": "https://cdn-icons-png.flaticon.com/512/3062/3062634.png",
+    "splashBackgroundColor": "#1e1e1e"
+  }
+}
