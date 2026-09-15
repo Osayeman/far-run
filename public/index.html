@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <base href="/" />
     <title>FAR RUN</title>
     
     <!-- Farcaster Mini-App / Frame Meta Tags -->
@@ -28,15 +29,13 @@
 </head>
 <body>
     <div id="root">
-        <!-- Fallback while React boots -->
         <div style="color: #666; font-family: monospace; font-size: 14px; text-align: center; padding-top: 100px;">
             Loading FAR RUN...
         </div>
     </div>
     
     <script>
-        // Global error catcher to prevent silent white screens
-        window.addEventListener('error', function(e) {
+        window.addEventListener("error", function(e) {
             console.error("FAR RUN Runtime Error:", e.error || e.message);
         });
     </script>
