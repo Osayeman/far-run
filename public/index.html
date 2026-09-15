@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>FAR RUN</title>
+    
+    <!-- Farcaster Mini-App / Frame Meta Tags -->
+    <meta property="fc:miniapp" content='{"version": "1", "name": "FAR RUN", "iconUrl": "https://cdn-icons-png.flaticon.com/512/3062/3062634.png", "splashImageUrl": "https://cdn-icons-png.flaticon.com/512/3062/3062634.png", "splashBackgroundColor": "#1e1e1e"}' />
+    <meta name="fc:frame" content='{"version":"next","imageUrl":"https://cdn-icons-png.flaticon.com/512/3062/3062634.png","button":{"title":"Play FAR RUN","action":{"type":"launch_frame","name":"FAR RUN","splashImageUrl":"https://cdn-icons-png.flaticon.com/512/3062/3062634.png","splashBackgroundColor":"#1e1e1e"}}}' />
+
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- React & Babel -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Farcaster SDKs -->
+    <script src="https://cdn.jsdelivr.net/npm/@farcaster/frame-sdk/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@farcaster/miniapp-sdk/dist/index.min.js"></script>
+
+    <!-- Ethers & Firebase -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>

@@ -36,7 +36,11 @@ function App() {
         auth.onAuthStateChanged(u => setUser(u));
 
         // 2. Farcaster User Data
-        if (window.miniapp && window.miniapp.sdk) {
+        if (window.farcaster && window.farcaster.sdk) {
+            window.farcaster.sdk.actions.ready();
+            const fcUser = window.farcaster.sdk.context?.user;
+            if (fcUser) setUsername(fcUser.username || fcUser.displayName || "Runner");
+        } else if (window.miniapp && window.miniapp.sdk) {
             window.miniapp.sdk.actions.ready();
             const fcUser = window.miniapp.sdk.context?.user;
             if (fcUser) setUsername(fcUser.username || fcUser.displayName || "Runner");
@@ -44,7 +48,11 @@ function App() {
 
         // 3. Lives
         const storedLives = localStorage.getItem('far_run_lives');
-        setLives(storedLives ? parseInt(storedLives) : 0);
+        const initialLives = storedLives !== null ? parseInt(storedLives) : MAX_LIVES;
+        setLives(initialLives);
+        if (storedLives === null) {
+            localStorage.setItem('far_run_lives', MAX_LIVES);
+        }
 
         // 4. Init Game Engine (Vanilla JS)
         // We delay slightly to ensure the DOM elements (canvas, buttons) are rendered by React
@@ -60,14 +68,16 @@ function App() {
     // --- LOGIC HOOKS ---
 
     const checkLives = () => {
-        const currentLives = parseInt(localStorage.getItem('far_run_lives') || '0');
+        const stored = localStorage.getItem('far_run_lives');
+        const currentLives = stored !== null ? parseInt(stored) : MAX_LIVES;
         if (currentLives > 0) return true;
         setShowPaywall(true);
         return false;
     };
 
     const handleGameOver = () => {
-        const current = parseInt(localStorage.getItem('far_run_lives') || '0');
+        const stored = localStorage.getItem('far_run_lives');
+        const current = stored !== null ? parseInt(stored) : MAX_LIVES;
         if (current > 0) {
             const newVal = current - 1;
             setLives(newVal);
